@@ -5,7 +5,8 @@ from pylab import *
 from numpy import *
 
 def loadData(name):
-    DATADIR='sav/'
+#    DATADIR='sav/'
+    DATADIR='/home/zhenfeng/Research/GroupEvolution/src/code201611-MZ/sav/' 
     if name == 'allGroups':
         G={}
         fpath=DATADIR+'gids-all.csv'
@@ -87,7 +88,7 @@ def loadData(name):
 
     if name == 'userStates':
         UI={}
-        csvfile=open('sav/UserState.txt', 'rb')
+        csvfile=open(DATADIR+'UserState.txt', 'rb')
         data = csv.reader(csvfile, delimiter=',')
         for row in data:
             UI[row[0]]=int(row[1])
@@ -98,7 +99,7 @@ def loadData(name):
 
     if name == 'groupsByDay':
         GBD={}
-        fpath='sav/GroupsByDay.txt'
+        fpath=DATADIR+'GroupsByDay.txt'
         csvfile=open(fpath, 'rb')
         data = csv.reader(csvfile, delimiter=',')
         for row in data:
@@ -110,7 +111,7 @@ def loadData(name):
 
     if name == 'NJoinsByDay':
         JBD={}
-        fpath='sav/NJoinsByDay.txt'
+        fpath=DATADIR+'NJoinsByDay.txt'
         csvfile=open(fpath, 'rb')
         data = csv.reader(csvfile, delimiter=',')
         for row in data:

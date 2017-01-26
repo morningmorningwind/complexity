@@ -47,7 +47,6 @@ for p in P:
     LSP.append(Lsp)
     POS0.append(Pos0)
         
-
 #data---------
 US=loadData('userStates')
 NU=len(US)
